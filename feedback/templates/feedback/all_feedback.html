@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css_static %}
+{% endblock %}
+
+{% block header %}
+<div class="header">
+  <h1>Обратная связь</h1>
+</div>
+{% endblock %}
+
+
+{% block navbar %}
+{% include 'includes/navbar.html' %}
+{% endblock %}
+
+{% block side %}
+{% endblock %}
+
+{% block main %}
+<ul>
+    <h2>Все отзыва с сайта</h2>
+{% for value in context %}
+    <li>
+        {{ value.name }} {{ value.rating }}
+        <a href="{% url 'one_feedback' value.id %}">
+            {{ value.feedback|slice:":20" }}</a>
+    </li>
+    <br>
+{% endfor %}
+</ul>
+{% endblock %}
+
+
+
+{% block footer %}
+{% include 'includes/footer.html' %}
+{% endblock %}

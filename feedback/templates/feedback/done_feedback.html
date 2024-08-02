@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css_static %}
+{% endblock %}
+
+{% block header %}
+<div class="header">
+  <h1>Обратная связь</h1>
+  <p></p>
+</div>
+{% endblock %}
+
+
+{% block navbar %}
+{% include 'includes/navbar.html' %}
+{% endblock %}
+
+{% block side %}
+
+{% endblock %}
+
+{% block main %}
+<div class="center_text">
+  <ul>
+    <h2>Отзыв успешно оставлен!</h2>
+    <h2><a href="/grape_varieties">На главную</a></h2>
+    <h2><a href="{% url 'all_feed' %}">Все отзывы</a></h2>
+  </ul>
+</div>
+{% endblock %}
+
+
+
+{% block footer %}
+{% include 'includes/footer.html' %}
+{% endblock %}

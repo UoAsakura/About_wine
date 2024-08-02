@@ -1,0 +1,11 @@
+
+{% for cat in cats %}
+{% if cat.slug == cat_selected %}
+<br>
+{{cat.name}}
+{% else %}
+<br>
+<a href="{{ cat.get_url }}" class="cats">{{ cat.name }}</a><br>
+{% endif %}
+{% endfor %}
+<br>

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block css_static %}
+{% endblock %}
+
+{% block header %}
+<div class="header">
+  <h1>Обратная связь</h1>
+</div>
+{% endblock %}
+
+
+{% block navbar %}
+{% include 'includes/navbar.html' %}
+{% endblock %}
+
+{% block side %}
+{% endblock %}
+
+{% block main %}
+    <ul>
+        <h2><a href="{% url 'all_feed' %}">Назад</a></h2>
+    <h2>Отзыв от {{ context.name }}</h2>
+    Пользователь: {{ context.name }}
+        <br>
+    Оценка: {{ context.rating }}
+        <br>
+    Отзыв: {{ context.feedback}}
+    </ul>
+{% endblock %}

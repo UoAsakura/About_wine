@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css_static %}
+{% endblock %}
+
+{% block header %}
+{% include 'includes/for_grapes/header.html'%}
+{% endblock %}
+
+
+{% block navbar %}
+{% include 'includes/for_index/navbar.html'%}
+{% endblock %}
+
+{% block side %}
+ <div class="side">
+    <h2>Краткая сводка</h2>
+    <p>Много много много слов</p>
+
+    <h3>Ещё одна сводка</h3>
+    <p>Возможно больше, а может и меньше слов
+    </p>
+
+  </div>
+{% endblock %}
+
+{% block main %}
+<div class="main">
+    <h2>Информация о сорте {{ grape.about_grape.name_rus  }}</h2>
+    <h4>Полощадь - {{ grape.area }} Га</h4>
+    <h4>{{ grape.about_grape.about_grape }}</h4>
+</div>
+{% endblock %}
+
+
+
+{% block footer %}
+{% include 'includes/for_index/footer.html' %}
+{% endblock %}
